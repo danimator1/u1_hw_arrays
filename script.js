@@ -21,9 +21,12 @@ Note: 'pizza' should be the first item in the array, followed by 'cheeseburger'.
 Complete Exercise 2 in the space below:
 */
 
-
+const foods = [];
+foods.push('pizza', 'cheeseburger');
 
 console.log('Exercise 2 result:', foods);
+
+const foods = ['pizza','cheeseburger'];
 
 
 /*
@@ -34,9 +37,13 @@ Exercise 3: Insert at the beginning
 Complete Exercise 3 in the space below:
 */
 
+const foods = ['pizza','cheeseburger'];
+foods.unshift('Taco');
 
 
 console.log('Exercise 3 result:', foods);
+
+const foods = ['Taco', 'pizza', 'cheeseburger'];
 
 
 /*
@@ -50,9 +57,15 @@ Exercise 4: Access an array element
 Complete Exercise 4 in the space below:
 */
 
+const foods = ['Taco', 'pizza', 'cheeseburger'];
+
+const favFood = foods[1];
+
 
 
 console.log('Exercise 4 result:', favFood);
+
+console.log(favFood); 'pizza'
 
 
 
@@ -63,6 +76,9 @@ Exercise 5: Insert an element between two others
 
 Complete Exercise 5 in the space below:
 */
+
+const foods = ['Taco', 'pizza', 'cheeseburger'];
+foods.splice('tofu');
 
 
 
@@ -77,9 +93,12 @@ Exercise 6: Replace elements
 Complete Exercise 6 in the space below:
 */
 
-
+const foods = ['Taco', 'pizza', 'tofu', 'cheeseburger'];
+foods[1]= 'sushi','cupcake';
 
 console.log('Exercise 6 result:', foods)
+
+console.log(foods); ['Taco', 'sushi , cupcake', 'tofu', 'cheeseburger']
 
 
 
@@ -94,9 +113,12 @@ Exercise 7: Using the `slice()` method
 Complete Exercise 7 in the space below:
 */
 
+const foods = ['Taco', 'sushi , cupcake', 'tofu', 'cheeseburger'];
+const yummy = foods.slice(1,2);
 
 console.log('Exercise 7 result:', yummy);
 
+console.log(yummy); ['sushi , cupcake']
 
 /*
 Exercise 8: Finding an index
@@ -109,9 +131,13 @@ Exercise 8: Finding an index
 Complete Exercise 8 in the space below:
 */
 
+const foods = ['Taco', 'sushi , cupcake', 'tofu', 'cheeseburger'];
+const soyIdx = foods.indexOf('tofu');
 
 
 console.log('Exercise 8 result:', soyIdx);
+
+console.log(soyIdx); 2
 
 
 /*
@@ -128,10 +154,16 @@ Note: The final result should log as:
 Complete Exercise 9 in the space below:
 */
 
-
+const foods = ['Taco', 'sushi , cupcake', 'tofu', 'cheeseburger'];
+const allFoods = foods.join(' -> ');
 
 console.log('Exercise 9 result:', allFoods);
 
+console.log(allFoods); 'Taco -> sushi , cupcake -> tofu -> cheeseburger'
+
+// after research on Chat GPT I came up with thie code to add the arrow between sushi and cupake,
+// const allFoods = foods.map(food => food.split(' , ').join(',')).join(' -> ');
+// for the desired output
 
 /*
 Exercise 10: Check for an element
@@ -145,5 +177,10 @@ Complete Exercise 10 in the space below:
 */
 
 
+const foods = ['Taco', 'sushi , cupcake', 'tofu', 'cheeseburger'];
+const hasSoup = foods.includes('soup');
+
 
 console.log('Exercise 10 result:', hasSoup);
+
+console.log(hasSoup); false
